@@ -1,0 +1,129 @@
+/* ===================== */
+/* ✨ Light & Dark Theme  */
+/* ===================== */
+
+/* Standard-Farben für Light Mode */
+:root {
+  --bg-color: #f4f6f8;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --primary-color: #0077cc;
+  --primary-hover: #005fa3;
+  --danger-color: #e74c3c;
+  --danger-hover: #c0392b;
+}
+
+/* Überschreiben für Dark Mode */
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #eeeeee;
+  --card-bg: #2c2c2c;
+  --input-bg: #3a3a3a;
+  --primary-color: #4dabf7;
+  --primary-hover: #228be6;
+  --danger-color: #ff6b6b;
+  --danger-hover: #e03131;
+}
+
+/* ===================== */
+/* ✨ Grundlayout         */
+/* ===================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ===================== */
+/* ✨ Titel und Container */
+/* ===================== */
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* ===================== */
+/* ✨ Eingabefelder & Buttons */
+/* ===================== */
+
+input, button {
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  margin: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #888;
+  transition: background-color 0.2s ease-in-out;
+}
+
+input {
+  width: 250px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ===================== */
+/* ✨ Aufgabenliste        */
+/* ===================== */
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+li {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===================== */
+/* ✨ Lösch-Button         */
+/* ===================== */
+
+li button {
+  background-color: var(--danger-color);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: var(--danger-hover);
+}
